@@ -77,13 +77,21 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  flex: 1;
 }
 
 .result__video {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 } 
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
 
 .search-form {
   display: flex;
@@ -95,4 +103,29 @@ ol {
 .content__list-container {
   height: 534px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
 }
