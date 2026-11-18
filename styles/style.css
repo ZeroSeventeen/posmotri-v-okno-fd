@@ -100,8 +100,26 @@ ol {
   align-items: flex-start;
 }
 
+.search-form__fieldset-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 94%;
+}
+
+.content__accent {
+  color: #545050;
+}
+
 .content__list-container {
-  height: 534px;
+  height: 298px; /*534px*/
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -116,6 +134,7 @@ ol {
 
 .content__video-card {
   display: flex;
+  min-width: 0;
   align-items: flex-start;
 }
 
@@ -128,4 +147,30 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-width: 0;
+}
+
+.content__video-card-title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.content__video-card-description {
+  line-height: 0.9em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+
 }
