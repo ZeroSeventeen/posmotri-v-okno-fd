@@ -82,12 +82,15 @@ ol {
 } 
 
 .content__details {
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 26px;
   flex: 1;
+  overflow-x: hidden;
 }
 
 .result {
@@ -98,15 +101,17 @@ ol {
 
 .result__video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
 } 
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .search-form {
@@ -187,6 +192,10 @@ ol {
   opacity: 1;
 }
 
+.search-form__label:hover {
+  cursor: pointer;
+}
+
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
@@ -204,11 +213,15 @@ ol {
 }
 
 .content__list-container {
-  height: 298px; /*534px*/
+  position: relative;
+  height: 298px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex-shrink: 0;
+  min-width: 0;
+  flex: 0 0 298px;
 }
 
 .content__list {
@@ -233,6 +246,8 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 0;
+  flex: 1 1 0;
+  width: 0;
 }
 
 .content__video-card-title {
@@ -254,8 +269,72 @@ ol {
   overflow: hidden;
 }
 
+.content__list-item {
+  padding: 0 3px;
+}
+
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  display: block;
+    cursor: pointer;
 }
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.button {
+  height: 34px;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  max-width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  min-height: 34px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+} 
+
 
